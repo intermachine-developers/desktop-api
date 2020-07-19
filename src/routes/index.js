@@ -4,8 +4,12 @@ const router = Router();
 
 // routes
 router.get('/', (req, res)=> {
- res.send('demo api');
+ res.json('Datas')
 });
 
-// export
+router.post('/register', (req, res) => {
+    res.json({"reuslt": 'new user add'});
+});
+
+// exportar
 module.exports = router;
