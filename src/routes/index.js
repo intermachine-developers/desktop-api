@@ -26,5 +26,10 @@ router.post('/register', (req, res) => {
   db.ref('users').push(newUser);
 })
 
+// login user
+router.get('/:id', (req, res) => {
+ res.json('user id login');
+})
+
 // exportar
 module.exports = router;
