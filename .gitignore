@@ -1,2 +1,4 @@
 /node_modules
 package-lock.json
+.env
+fazt-community-desktop-app-firebase-adminsdk-*.json

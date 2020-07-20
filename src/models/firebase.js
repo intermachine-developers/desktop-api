@@ -1,13 +1,19 @@
+//dotenv
+require('dotenv').config();
+
 // modulo de firebase
 const admin = require("firebase-admin");
 
-// api firebase
-const serviceAccount = require("./serviceAccountKey.json");
+// keys
+const serviceAccount =require(process.env.API_KEY);
 
 // iniciar firebase app
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://fazt-community-desktop-app.firebaseio.com"
-})
+  databaseURL: process.env.FIREBASE_URI,
+});
+
+
+
 
 module.exports = admin;
